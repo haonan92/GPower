@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../../css/profile.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div ng-show="currentUser.roles.indexOf('admin')> -1">
+        <h2>Admin</h2>
+        <table class="table table-striped" border="1">
+            <tr class="info">
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+            <tr class="warning" ng-repeat="user in users">
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div ng-show="currentUser.roles.indexOf('student')> -1">
+        <h2>Student</h2>
+    </div>
+</body>
+</html>
