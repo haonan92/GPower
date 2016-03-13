@@ -2,25 +2,20 @@
 <html>
 <head>
     <title></title>
+
 	<meta charset="utf-8" />
+
     <link href="css/bootstrap.css" rel="stylesheet" />
-
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/dashboard.css" rel="stylesheet" />
-    <link href="css/carousel.css" rel="stylesheet" />
 
-    
-     <!------------------------------------->
-    <link rel="stylesheet" type="text/css" href="css/members/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/members/demo.css" />
 
     <link rel="stylesheet" type="text/css" href="css/members/component.css" />
-
     <script type="text/javascript" src="js/members/modernizr.min.js"></script>
     <script src="js/members/photostack.js"></script>
     <script type="text/javascript" src="js/members/classie.js"></script>
-    <script type="text/javascript" src="js/members/try.js"></script>
+    
 
+        <!--timeline-->
     <!------------------------------------------>
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -34,7 +29,7 @@
 
 
 </head>
-<body ng-app="Passport" style="background-color:black">
+<body ng-app="Passport">
     <nav class="navbar navbar-inverse navbar-fixed-top"
           ng-controller="NavCtrl" 
          style="background-color :black">
@@ -56,10 +51,9 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#login" ng-show="!currentUser">Log in</a></li> 
-                    <li><a href="#register" ng-show="!currentUser">Sign up</a></li>
+                    <!--<li><a href="#register" ng-show="!currentUser">Sign up</a></li>-->
                     <li><a href="#profile" ng-show="currentUser">Welcome! {{currentUser.username}}</a></li>
                     <li><a href="#timeline" ng-show="currentUser">Timeline</a></li>
-
                     <li><a href="#logout" ng-show="currentUser" ng-click="logout()">Log out</a></li>
                 </ul>
             </div>
