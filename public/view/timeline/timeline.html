@@ -1,12 +1,370 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>TimeLine</title>
-	<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Timeline</title>
     <link rel="stylesheet" href="../../css/timeline.css" />
-
+    <link rel="stylesheet" href="../../css/StyleSheet.css" />
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
+    <link rel="stylesheet" href="../../css/music-css/reset.css" />
+    <link rel="stylesheet" href="../../css/music-css/style.css" media="screen" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-    <h1>TimeLine</h1>
+    <div class="music-player">
+        <div class="info">
+            <div class="left">
+                <a href="javascript:;" class="icon-shuffle"></a>
+                <a href="javascript:;" class="icon-heart"></a>
+            </div>
+            <div class="center">
+                <div class="jp-playlist">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="right">
+                <a href="javascript:;" class="icon-repeat"></a>
+                <a href="javascript:;" class="icon-share"></a>
+            </div>
+
+            <div class="progress jp-seek-bar">
+                <span class="jp-play-bar" style="width: 0%"></span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="current jp-current-time">00:00</div>
+            <div class="play-controls">
+                <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
+                <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+                <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+                <a href="javascript:;" class="icon-next jp-next" title="next"></a>
+            </div>
+            <div class="volume-level jp-volume-bar">
+                <span class="jp-volume-bar-value" style="width: 0%"></span>
+                <a href="javascript:;" class="icon-volume-up jp-volume-max" title="max volume"></a>
+                <a href="javascript:;" class="icon-volume-down jp-mute" title="mute"></a>
+            </div>
+        </div>
+
+        <div id="jquery_jplayer" class="jp-jplayer"></div>
+
+    </div>
+
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="light">
+                <i></i>
+            </div>
+            <hr class="line-left" />
+            <hr class="line-right" />
+            <div class="main">
+                <h1 class="title">GPower TimeLine</h1>
+                <div class="year">
+                    <h2>
+                        <a href="#">2016<i></i></a>
+                    </h2>
+                    <div class="list">
+                        <ul>
+
+                            <li class="cls">
+                                <p class="version">&nbsp;</p>
+                                <p class="version">&nbsp;</p>
+                                <p class="version">&nbsp;</p>
+                                
+                            </li>
+
+                            <li class="cls highlight">
+                                <p class="date">Feb 20</p>
+                                <p class="intro">Babson Collage</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>Perform Jazz in “Chinese Spring Festival Gala” hold in Babson Collage</p>
+                                </div>
+                            </li>
+                            <img width="450" height="400" src="../../image/timelinephotos/2016-02-20.jpg" />
+
+
+
+
+                            <li class="cls">
+                                <p class="date">Feb 14</p>
+                                <p class="intro">Brown University</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+
+                                    <p>
+                                        Perform Jazz in “Chinese Spring Festival Gala” hold in Brown University
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="400" height="550" src="../../image/timelinephotos/2016-02-14.jpg" />
+
+
+
+                            <li class="cls">
+                                <p class="date">Feb 13</p>
+                                <p class="intro">University of Massachusetts</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+
+                                    <p>
+                                        Perform Jazz in “Chinese Spring Festival Gala” hold in University of Massachusetts
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="600" height="550" src="../../image/timelinephotos/2016-02-13.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">Feb 10</p>
+                                <p class="intro">Suffolk University</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        Perform K-pop “Mamma Mia” in “Chinese Spring Festival Gala” hold in Suffolk University
+
+                                    </p>
+                                </div>
+                            </li>
+
+                            <img width="700" height="500" src="../../image/timelinephotos/2016-02-10.jpg" />
+
+
+
+                            <li class="cls">
+                                <p class="date">Jan 30</p>
+                                <p class="intro">Harvard University</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        Perform Jazz in “Ivy League Chinese Spring Festival Gala” hold in Harvard University
+
+                                    </p>
+                                </div>
+                            </li>
+
+                            <img width="600" height="450" src="../../image/timelinephotos/2016-01-30.jpg" />
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-2015--->
+
+
+                <div class="year">
+                    <h2>
+                        <a href="#">2015<i></i></a>
+                    </h2>
+                    <div class="list">
+                        <ul>
+
+
+
+                            <li class="cls highlight">
+                                <p class="date">Dec 12</p>
+                                <p class="intro">K-pop “Mamma Mia”filming</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        经历了两天辛苦的拍摄，终于完成了Mamma Mia的视频
+                                        感谢“红星喜剧社”的协助！！！！！
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="500" height="500" src="../../image/timelinephotos/2015-12-12.jpg" />
+
+
+
+                            <li class="cls">
+                                <p class="date">Nov 18</p>
+                                <p class="intro">K-pop “Mamma Mia”Casting</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        在完成2015年度的招新之后，为了Mamma Mia的视频拍摄， 举行了全社团规模的Casting.
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="500" height="400" src="../../image/timelinephotos/2016-11-18.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">Nov 6</p>
+                                <p class="intro">Audition for 2015</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        111111！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="700" height="500" src="../../image/timelinephotos/2015-11-06.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">Oct 3</p>
+                                <p class="intro">Participate in the “Chinese National Day Gala” of Boston University</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="600" height="400" src="../../image/timelinephotos/2015-10-03.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">May 10</p>
+                                <p class="intro">Filming “Dance for you”</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        xxxxxxxxxxxxxxxxxxxxx
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="600" height="400" src="../../image/timelinephotos/2015-05-10.jpg" />
+
+
+
+                            <li class="cls">
+                                <p class="date">Sep 1</p>
+                                <p class="intro">2015更名为GPower</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        xxxxxxxxxxxxxxxxxxxxx
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="400" height="400" src="../../image/timelinephotos/logo.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">April 8</p>
+                                <p class="intro">First K-pop Video- “Mr chu”</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        xxxxxxxxxxxxxxxxxxxxx
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="300" height="400" src="../../image/timelinephotos/2015-04-18.jpg" />
+                        </ul>
+                    </div>
+                </div>
+
+                <!--2014-->
+
+                <div class="year">
+                    <h2>
+                        <a href="#">2014<i></i></a>
+                    </h2>
+                    <div class="list">
+                        <ul>
+                            <li class="cls highlight">
+                                <p class="date">Dec</p>
+                                <p class="intro">四大元老的演出</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        ！！！！！！！！！！！！！！！！！！！！1
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="600" height="400" src="../../image/timelinephotos/2014-12.jpg" />
+
+
+
+                            <li class="cls">
+                                <p class="date">Nov 22</p>
+                                <p class="intro">Audition for 2014</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        ！！！！！！！！！！！！！！！！！
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="500" height="300" src="../../image/timelinephotos/2014-11-22.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">2014 March -- Nov</p>
+                                <p class="intro">Start workshop</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        111111！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="700" height="500" src="../../image/timelinephotos/2014-03.jpg" />
+
+
+                            <li class="cls">
+                                <p class="date">Feb 2</p>
+                                <p class="intro">First Team Photoshot</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                    </p>
+                                </div>
+                            </li>
+                            <img width="600" height="400" src="../../image/timelinephotos/2014-02-02.jpg" />
+
+                            <li class="cls">
+                                <p class="date">Jan 1</p>
+                                <p class="intro">成立Boston Dance Club(BDC)</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>
+                                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                    </p>
+                                </div>
+                            </li>
+<!--                        <img width="600" height="400" src="images/3333.png" />-->    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    </div>
+    </div>
+
+
+    <script src="js/music-js/jquery.min.js"></script>
+    <script src="js/music-js/jquery.jplayer.min.js"></script>
+    <script src="js/music-js/jplayer.playlist.min.js"></script>
+
+    <script src="js/music-js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(".main .year .list").each(function (e, target) {
+            var $target = $(target),
+            $ul = $target.find("ul");
+            $target.height($ul.outerHeight()), $ul.css("position", "absolute");
+        });
+        $(".main .year>h2>a").click(function (e) {
+            e.preventDefault();
+            $(this).parents(".year").toggleClass("close");
+        });
+    </script>
 </body>
 </html>
