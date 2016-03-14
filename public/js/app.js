@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
         templateUrl: 'view/register/register.html',
         controller: 'RegisterCtrl'
     })
-    .when('/profile', {
+    .when('/profile/:username', {
         templateUrl: 'view/profile/profile.html',
         controller: 'ProfileCtrl',
         resolve: {
@@ -34,6 +34,9 @@ app.config(function($routeProvider) {
     })
     .when('/photos', {
         templateUrl: 'view/photos/photos.html'
+    })
+    .when('/aboutus', {
+        templateUrl: 'view/aboutus/aboutus.html'
     })
     
     .otherwise({

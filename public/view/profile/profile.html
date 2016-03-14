@@ -1,28 +1,52 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <title>Project idea</title>
     <link href="../../css/profile.css" rel="stylesheet" />
-
 </head>
 <body>
     <div ng-show="currentUser.roles.indexOf('admin')> -1">
-        <h2>Admin</h2>
-        <table class="table table-striped" border="1">
-            <tr class="info">
-                <th>Username</th>
-                <th>Password</th>
-            </tr>
-            <tr class="warning" ng-repeat="user in users">
-                <td>{{user.username}}</td>
-                <td>{{user.password}}</td>
-            </tr>
-        </table>
+        <h2 style="color: azure">Welcome {{currentUser.username}}</h2>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <table class="table table-striped" border="1">
+                <thead>
+                    <tr class="info">
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Remove this user</th>
+                        <th>Edit this user</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr class="warning" ng-repeat="user in users">
+                        <td>{{user.username}}</td>
+                        <td>{{user.password}}</td>
+                        <td>
+                        <button ng-show="user.username !== currentUser.username"
+                                 ng-click="#" 
+                                class="btn btn-danger pull-right"
+                                 id="#">
+                            Remove this User
+                            </button>
+                        </td>
+                        <td>
+                            <button ng-show="user.username !== currentUser.username"
+                                    ng-click="#"
+                                    class="btn btn-warning pull-right"
+                                    id="#">
+                                Edit
+                            </button>
+                        </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
 
-    <div ng-show="currentUser.roles.indexOf('student')> -1">
-        <h2>Student</h2>
-    </div>
 </body>
 </html>

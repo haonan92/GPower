@@ -45,6 +45,8 @@
                 <a class="navbar-brand" href="#home">GPower</a>
                 <a class="navbar-brand" href="#members">Members</a>
                 <a class="navbar-brand" href="#photos">Photos</a>
+                <a class="navbar-brand" href="#aboutus">About us</a>
+
 
 
             </div>
@@ -52,7 +54,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#login" ng-show="!currentUser">Log in</a></li> 
                     <!--<li><a href="#register" ng-show="!currentUser">Sign up</a></li>-->
-                    <li><a href="#profile" ng-show="currentUser">Welcome! {{currentUser.username}}</a></li>
+                    <li><a href="#profile/{{currentUser.username}}" ng-show="currentUser">Welcome! {{currentUser.username}}</a></li>
                     <li><a href="#timeline" ng-show="currentUser">Timeline</a></li>
                     <li><a href="#logout" ng-show="currentUser" ng-click="logout()">Log out</a></li>
                 </ul>

@@ -35,6 +35,13 @@ var UserModel = mongoose.model("UserModel", UserSchema);
 //var student = new UserModel({username: "bob",password: "bob",firstname: "bob",lastname: "Marle",roles: ["student"]});
 //admin.save();
 //student.save();
+//------------------------------------------
+//var haonan92 = new UserModel({username: "haonan92",password: "Zhn119007",firstname: "Haonan",lastname: "Zhao",roles: ["admin"]});
+//haonan92.save();
+
+//var wangdan = new UserModel({username: "wang.dan1",password: "wangdan123",firstname: "Dan",lastname: "Wang",roles: ["admin"]});
+//wangdan.save();
+
 
 
 app.use(bodyParser.json()); // for parsing application/json
