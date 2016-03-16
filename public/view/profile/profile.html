@@ -9,37 +9,32 @@
         <h2 style="color: azure">Welcome {{currentUser.username}}</h2>
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <table class="table table-striped" border="1">
+            <table class="table table-striped" border="0">
                 <thead>
+        
                     <tr class="info">
+                        <th>Firstname</th>
+                        <th>Lastname</th>
                         <th>Username</th>
-                        <th>Password</th>
                         <th>Remove this user</th>
-                        <th>Edit this user</th>
+                        
                     </tr>
 
                 </thead>
                 <tbody>
                     <tr class="warning" ng-repeat="user in users">
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
                         <td>{{user.username}}</td>
-                        <td>{{user.password}}</td>
                         <td>
-                        <button ng-show="user.username !== currentUser.username"
-                                 ng-click="#" 
-                                class="btn btn-danger pull-right"
+                        <button ng-show="user.roles.indexOf('admin') <= -1"
+                                 ng-click="remove(user._id)" 
+                                class="btn btn-danger"
                                  id="#">
                             Remove this User
                             </button>
                         </td>
-                        <td>
-                            <button ng-show="user.username !== currentUser.username"
-                                    ng-click="#"
-                                    class="btn btn-warning pull-right"
-                                    id="#">
-                                Edit
-                            </button>
-                        </td>
-
+                     
                     </tr>
                 </tbody>
 

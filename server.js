@@ -32,7 +32,7 @@ var UserModel = mongoose.model("UserModel", UserSchema);
 
 //example
 //var admin = new UserModel({username: "alice",password: "alice",firstname: "Alice",lastname: "Wonderland",roles: ["admin"]});
-//var student = new UserModel({username: "bob",password: "bob",firstname: "bob",lastname: "Marle",roles: ["student"]});
+var student = new UserModel({username: "bob",password: "bob",firstname: "bob",lastname: "Marle",roles: ["student"]});
 //admin.save();
 //student.save();
 //------------------------------------------
@@ -42,7 +42,8 @@ var UserModel = mongoose.model("UserModel", UserSchema);
 //var wangdan = new UserModel({username: "wang.dan1",password: "wangdan123",firstname: "Dan",lastname: "Wang",roles: ["admin"]});
 //wangdan.save();
 
-
+//var ziqi = new UserModel({username: "lauraguo",password: "890309snSD",firstname: "Ziqi",lastname: "Guo",roles: ["admin"]});
+//ziqi.save();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -116,6 +117,8 @@ app.get("/rest/user", auth ,function (req, res) {
         res.json(users);
     });
 });
+
+
 //------------------------for registration--------------------
 app.post("/register", function (req, res) {
     var newUser = req.body;
@@ -141,6 +144,21 @@ app.post("/register", function (req, res) {
     });
     
 });
+
+//for delete user
+app.delete("/api/user/:id", function (req, res) {
+    var id = req.params.id;
+    UserModel.remove({ _id: id }, function (err, count) {
+        UserModel.find(function (err, users) {
+            res.json(users);
+        });
+    });
+});
+
+
+
+
+
 
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
