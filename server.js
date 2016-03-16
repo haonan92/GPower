@@ -36,14 +36,7 @@ var student = new UserModel({username: "bob",password: "bob",firstname: "bob",la
 //admin.save();
 //student.save();
 //------------------------------------------
-//var haonan92 = new UserModel({username: "haonan92",password: "Zhn119007",firstname: "Haonan",lastname: "Zhao",roles: ["admin"]});
-//haonan92.save();
 
-//var wangdan = new UserModel({username: "wang.dan1",password: "wangdan123",firstname: "Dan",lastname: "Wang",roles: ["admin"]});
-//wangdan.save();
-
-//var ziqi = new UserModel({username: "lauraguo",password: "890309snSD",firstname: "Ziqi",lastname: "Guo",roles: ["admin"]});
-//ziqi.save();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
