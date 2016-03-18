@@ -1,4 +1,4 @@
 ﻿$(window).load(function () {
     $("body").css("overflow", "auto");
-    $(".load-overlay").fadeOut(2800)
+    $(".load-overlay").fadeOut(2300)
 });
